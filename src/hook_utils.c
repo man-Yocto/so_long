@@ -29,6 +29,7 @@ void on_E(game_t *game, int code)
 }
 void	move_on_exit(game_t *game, int new_y, int new_x)
 {
+    
     update_prev_tile(game);
     on_E(game, 1);
     update_player_pos(game, new_y, new_x);
@@ -36,6 +37,7 @@ void	move_on_exit(game_t *game, int new_y, int new_x)
 
 void	move_on_floor(game_t *game, int new_y, int new_x, int can_move)
 {
+    
     if (can_move == 4)
         game->C_c--;
     update_prev_tile(game);

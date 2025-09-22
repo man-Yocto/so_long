@@ -7,7 +7,7 @@ SRCS = src/main.c src/map_reader.c src/map_checker.c src/display.c \
 OBJS	= $(SRCS:.c=.o)
 
 INCLUDES = -Iincludes -Imlx -Ilibft
-MLXFLAGS = -Lmlx -lmlx -lXext -lX11
+MLXFLAGS = -Lminilibx-linux -lmlx -lXext -lX11
 LIBFT	 = includes/libft/libft.a
 
 CC		= cc

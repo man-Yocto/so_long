@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
-#include "mlx.h"
+#include "../minilibx-linux/mlx.h"
 #define TILE_SIZE 64
 #define KEY_W      119
 #define KEY_A      97
@@ -76,6 +76,5 @@ int valid_path(game_t *game, char **c_map);
 void	move_on_exit(game_t *game, int new_y, int new_x);
 void move_on_floor(game_t *game, int new_y, int new_x, int can_move);
 int p_error(int code);  
-
 
 #endif

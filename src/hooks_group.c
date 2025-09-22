@@ -31,6 +31,9 @@ int handle_key(int keycode, game_t *game)
     else if (keycode == KEY_D || keycode == KEY_RIGHT)
         move_right(game);
     else if (keycode == KEY_ESC)
+    {
+        close_window(game);
         exit(0);
+    }
     return (0);
 }

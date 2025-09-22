@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   display.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yocto <yocto@student.42.fr>                +#+  +:+       +#+        */
+/*   By: aalkhaso <aalkhaso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 19:55:21 by yocto             #+#    #+#             */
-/*   Updated: 2025/09/20 23:47:31 by yocto            ###   ########.fr       */
+/*   Updated: 2025/09/22 16:16:52 by aalkhaso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,10 @@ void	free_images(game_t *game)
 int close_window(game_t *game)
 {
     free_images(game);
-    free_map(game); 
+    free_map(game);
+    mlx_destroy_display(game->mlx_ptr);
+    free(game->mlx_ptr);
     exit(0);
-    return (0);
 }
 void	init_window(game_t *game)
 {
