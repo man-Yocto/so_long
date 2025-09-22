@@ -3,6 +3,7 @@
 int	main(int argc, char **argv)
 {
     game_t	game;
+    ft_memset(&game, 0, sizeof(game_t));
 
     if (argc != 2)
     {

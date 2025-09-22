@@ -11,7 +11,7 @@ MLXFLAGS = -Lminilibx-linux -lmlx -lXext -lX11
 LIBFT	 = includes/libft/libft.a
 
 CC		= cc
-CFLAGS	= -Wall -Wextra -Werror $(INCLUDES)
+CFLAGS	= -Wall -Wextra -Werror -g $(INCLUDES)
 
 all: $(NAME)
 

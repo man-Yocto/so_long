@@ -17,7 +17,7 @@ int	free_map(game_t *game)
     int	i;
 
     i = 0;
-    while (i < game->y)
+    while (i < game->y && (game->map))
     {
         free(game->map[i]);
         i++;
