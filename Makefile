@@ -2,12 +2,11 @@ NAME	= so_long
 
 SRCS = src/main.c src/map_reader.c src/map_checker.c src/display.c \
        src/get_next_line.c src/hokking.c src/map_check.c src/hook_utils.c \
-	   src/hooks_group.c src/map_read.c
-	   
+	   src/hooks_group.c src/map_read.c src/get_next_line_utils.c src/draw.c
 OBJS	= $(SRCS:.c=.o)
 
-INCLUDES = -Iincludes -Imlx -Ilibft
-MLXFLAGS = -Lminilibx-linux -lmlx -lXext -lX11
+INCLUDES = -Iincludes -Iincludes/minilibx-linux -Iincludes/libft
+MLXFLAGS = -Lincludes/minilibx-linux -lmlx -lXext -lX11
 LIBFT	 = includes/libft/libft.a
 
 CC		= cc

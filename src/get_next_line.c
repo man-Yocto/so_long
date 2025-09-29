@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aalkhaso <aalkhaso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yocto <yocto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 05:22:23 by aalkhaso          #+#    #+#             */
-/*   Updated: 2025/08/18 10:40:03 by aalkhaso         ###   ########.fr       */
+/*   Updated: 2025/09/29 22:28:44 by yocto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,4 +138,3 @@ char	*get_next_line(int fd)
 	c = tmp;
 	return (line);
 }
-
