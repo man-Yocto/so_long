@@ -6,7 +6,7 @@
 /*   By: yocto <yocto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 22:08:42 by yocto             #+#    #+#             */
-/*   Updated: 2025/09/29 22:26:08 by yocto            ###   ########.fr       */
+/*   Updated: 2025/10/06 19:44:41 by yocto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	read_sc(const char *filename, t_game *game)
 		if (!check_line(line, game, &first))
 		{
 			free_read(line, fd, game);
-			return (0);
+			return (p_error(-6), 0);
 		}
 		tall++;
 		free(line);

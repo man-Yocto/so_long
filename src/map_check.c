@@ -6,7 +6,7 @@
 /*   By: yocto <yocto@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/29 22:06:39 by yocto             #+#    #+#             */
-/*   Updated: 2025/09/29 22:45:14 by yocto            ###   ########.fr       */
+/*   Updated: 2025/10/06 19:44:13 by yocto            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,7 @@ int	p_error(int code)
 			56);
 	else if (code == -5)
 		write(2, "Error\nInvalid file extension (use .ber)\n", 40);
+	else if (code == -6)
+		write(2, "Error\nMap is not rectangular\n", 29);
 	return (0);
 }
