@@ -1,5 +1,7 @@
 # So Long
 
+[![CI](https://github.com/man-Yocto/so_long/actions/workflows/ci.yml/badge.svg)](https://github.com/man-Yocto/so_long/actions/workflows/ci.yml)
+
 A 2D tile-based game implemented in C using the miniLibX graphics library. Navigate through maps, collect items, and reach the exit while avoiding enemies.
 
 ## Features
@@ -113,6 +115,20 @@ make clean  # Remove object files
 make fclean # Remove object files and executable
 make re     # Full rebuild
 ```
+
+## Key technical challenges
+
+- **Map validation** — checking the map is rectangular, closed by walls, and has exactly one player
+  and exit and at least one collectible.
+- **Reachability** — a flood fill from the player's position proves every collectible and the exit
+  can actually be reached.
+- **Event-driven rendering** — redrawing tiles from MiniLibX key and loop hooks without flicker.
+- **Clean shutdown** — freeing images, the map and the MLX window on every exit path, including the
+  window close button.
+
+## What I learned
+
+<!-- TODO: write this section yourself -->
 
 ## Author
 

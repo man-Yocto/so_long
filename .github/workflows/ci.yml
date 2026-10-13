@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install X11 dependencies
+        run: sudo apt-get update && sudo apt-get install -y libx11-dev libxext-dev libbsd-dev
+      - run: make
+
+  norminette:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install norminette
+      - name: Run norminette
+        run: norminette src includes/*.h includes/libft
